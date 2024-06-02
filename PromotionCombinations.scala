@@ -3,15 +3,16 @@ case class PromotionCombo(promotionCodes: Seq[String])
 
 object PromotionCombinations {
 
-  //function to find all combinable promotions with at least two combinable promotions in each combo
+  //find all combinable promotions with at least two combinable promotions in each combo
   def allCombinablePromotions(allPromotions: Seq[Promotion]): Seq[PromotionCombo] = {
     val allCombinations = allPromotions.toSet.subsets().filter(isCombinable).toSeq
 
-    //return only valid combinations with at least two promotions
-    allCombinations.filter(_.size >= 2).map(p => PromotionCombo(p.map(_.code).toSeq.sorted))
+    //return combos with at least two
+    val validCombinations = allCombinations.filter(_.size >= 2).map(p => PromotionCombo(p.map(_.code).toSeq.sorted))
+    filterRedundantCombinations(validCombinations)
   }
 
-  //checks if a set of promotions is combinable
+  //checks if promo can be combined
   private def isCombinable(promotions: Set[Promotion]): Boolean = {
     val codes = promotions.map(_.code)
     promotions.forall { promo =>
@@ -19,16 +20,24 @@ object PromotionCombinations {
     }
   }
 
-  //function to find promos for a given code
+  //function to find promotions for given code
   def combinablePromotions(promotionCode: String, allPromotions: Seq[Promotion]): Seq[PromotionCombo] = {
     val targetPromotion = allPromotions.find(_.code == promotionCode).get
     val otherPromotions = allPromotions.filterNot(_.code == promotionCode)
 
-    //generate all combinations that include the target promotion and are combinable
+    //generate promos that include target and can be combined
     val allCombinations = otherPromotions.toSet.subsets().filter(subset => isCombinable(subset + targetPromotion)).toSeq
 
-    //return two param combinations
-    allCombinations.filter(_.size >= 1).map(p => PromotionCombo((p + targetPromotion).map(_.code).toSeq.sorted))
+    //return only valid combinations with two or more promotions
+    val validCombinations = allCombinations.filter(_.size >= 1).map(p => PromotionCombo((p + targetPromotion).map(_.code).toSeq.sorted))
+    filterRedundantCombinations(validCombinations)
+  }
+
+  //function to filter out redundant combinations
+  private def filterRedundantCombinations(combinations: Seq[PromotionCombo]): Seq[PromotionCombo] = {
+    combinations.filterNot { combo =>
+      combinations.exists(other => combo != other && combo.promotionCodes.toSet.subsetOf(other.promotionCodes.toSet))
+    }
   }
 
   def main(args: Array[String]): Unit = {
