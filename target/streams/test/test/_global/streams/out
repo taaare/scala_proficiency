@@ -1,0 +1,17 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(PromotionCombinationsTest, org.scalatest.tools.Framework$$anon$1@70a58837, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mPromotionCombinationsTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mallCombinablePromotions[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the expected combinations[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mcombinablePromotions[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the expected combinations for P1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mcombinablePromotions[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should return the expected combinations for P3 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  List(PromotionCombo(List(P2, P3)), PromotionCombo(List(P3, P4, P5))) did not contain the same elements as List(PromotionCombo(List(P3, P2)), PromotionCombo(List(P3, P4, P5))) (PromotionsCombinationsTest.scala:59)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 169 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 3[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 2, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	PromotionCombinationsTest[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
