@@ -1,42 +1,46 @@
-//define case classes
 case class Rate(rateCode: String, rateGroup: String)
 case class CabinPrice(cabinCode: String, rateCode: String, price: BigDecimal)
 case class BestGroupPrice(cabinCode: String, rateCode: String, price: BigDecimal, rateGroup: String)
 
 object CruisePricing {
+  //function to get the best group prices
   def getBestGroupPrices(rates: Seq[Rate], prices: Seq[CabinPrice]): Seq[BestGroupPrice] = {
-    //map ratecode to rategroup
+    //map rateCode to rateGroup
     val rateMap = rates.map(rate => rate.rateCode -> rate.rateGroup).toMap
 
-    //group prices accordingly
+    //group prices by cabinCode and rateGroup
     val groupedPrices = prices
-      .filter(price => rateMap.contains(price.rateCode)) //filter to ensure existence
-      .groupBy(price => rateMap(price.rateCode))
+      .filter(price => rateMap.contains(price.rateCode))
+      .groupBy(_.cabinCode)
+      .mapValues(_.groupBy(price => rateMap(price.rateCode)))
 
-      //find best prices
-      groupedPrices.flatMap { case (rateGroup, cabinPrices) =>
-      cabinPrices.groupBy(_.cabinCode).map { case (cabinCode, pricesForCabin) =>
-        val bestPrice = pricesForCabin.minBy(_.price)
+    //find the best price for each rate group
+    groupedPrices.flatMap { case (cabinCode, pricesByGroup) =>
+      pricesByGroup.map { case (rateGroup, pricesForGroup) =>
+        val bestPrice = pricesForGroup.minBy(_.price)
         BestGroupPrice(bestPrice.cabinCode, bestPrice.rateCode, bestPrice.price, rateGroup)
       }
     }.toSeq
   }
 
-  //main method
+  //main method for defs
   def main(args: Array[String]): Unit = {
     val rates = Seq(
-      Rate("MilAB", "Military"),
-      Rate("Sen123", "Senior"),
-      Rate("Std001", "Standard")
+      Rate("M1", "Military"),
+      Rate("M2", "Military"),
+      Rate("S1", "Senior"),
+      Rate("S2", "Senior")
     )
 
     val prices = Seq(
-      CabinPrice("Cabin1", "MilAB", 100.00),
-      CabinPrice("Cabin1", "Sen123", 80.00),
-      CabinPrice("Cabin1", "Std001", 120.00),
-      CabinPrice("Cabin2", "MilAB", 90.00),
-      CabinPrice("Cabin2", "Sen123", 70.00),
-      CabinPrice("Cabin2", "Std001", 110.00)
+      CabinPrice("CA", "M1", 200.00),
+      CabinPrice("CA", "M2", 250.00),
+      CabinPrice("CA", "S1", 225.00),
+      CabinPrice("CA", "S2", 260.00),
+      CabinPrice("CB", "M1", 230.00),
+      CabinPrice("CB", "M2", 260.00),
+      CabinPrice("CB", "S1", 245.00),
+      CabinPrice("CB", "S2", 270.00)
     )
 
     val bestPrices = getBestGroupPrices(rates, prices)
