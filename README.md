@@ -6,7 +6,7 @@ I also built unit tests to run from the SBT shell - though they are under develo
 
 To run the main functions, use the following commands in the root dir
 
-```sbt```
+'''sbt'''
 
 ```compile```
 
