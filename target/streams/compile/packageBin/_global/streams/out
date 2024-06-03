@@ -1,0 +1,31 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging C:\NXiD\scala_proficiency\target\scala-2.13\scalaproficiency_2.13-0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BestGroupPrice$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\NXiD\scala_proficiency\target\scala-2.13\classes\BestGroupPrice$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BestGroupPrice.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\NXiD\scala_proficiency\target\scala-2.13\classes\BestGroupPrice.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CabinPrice$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\NXiD\scala_proficiency\target\scala-2.13\classes\CabinPrice$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CabinPrice.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\NXiD\scala_proficiency\target\scala-2.13\classes\CabinPrice.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CruisePricing$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\NXiD\scala_proficiency\target\scala-2.13\classes\CruisePricing$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CruisePricing.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\NXiD\scala_proficiency\target\scala-2.13\classes\CruisePricing.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Promotion$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\NXiD\scala_proficiency\target\scala-2.13\classes\Promotion$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Promotion.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\NXiD\scala_proficiency\target\scala-2.13\classes\Promotion.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PromotionCombinations$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\NXiD\scala_proficiency\target\scala-2.13\classes\PromotionCombinations$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PromotionCombinations.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\NXiD\scala_proficiency\target\scala-2.13\classes\PromotionCombinations.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PromotionCombo$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\NXiD\scala_proficiency\target\scala-2.13\classes\PromotionCombo$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PromotionCombo.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\NXiD\scala_proficiency\target\scala-2.13\classes\PromotionCombo.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Rate$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\NXiD\scala_proficiency\target\scala-2.13\classes\Rate$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Rate.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\NXiD\scala_proficiency\target\scala-2.13\classes\Rate.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
