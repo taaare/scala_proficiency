@@ -2,7 +2,7 @@
 
 This is a from scratch implementation of two Scala problems I undertook to better understand the language. I had no prior experience using Scala before this, and thus made extensive use of documentation. I built two files: CruisePricing.scala and PromotionCombinations.scala to test the functional and OOP aspects of the language. It utilizes first-class and higher-order functions, SBT, lambdas, and more functional capabilities to do this. 
 
-I also built unit tests to run from the SBT shell. All tests are passed. The main functions work as intended. 
+I also built unit tests to run from the SBT shell. All case tests based on data provided are passed. The main functions work as intended. 
 
 To run the main functions, use the following terminal commands in the root dir
 
