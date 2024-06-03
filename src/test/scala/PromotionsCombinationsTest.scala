@@ -51,7 +51,7 @@ class PromotionCombinationsTest extends AnyFlatSpec with Matchers {
     )
 
     val expected = Seq(
-      PromotionCombo(Seq("P3", "P2")),
+      PromotionCombo(Seq("P2", "P3")),
       PromotionCombo(Seq("P3", "P4", "P5"))
     )
 

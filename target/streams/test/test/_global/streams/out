@@ -1,17 +1,26 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(PromotionCombinationsTest, org.scalatest.tools.Framework$$anon$1@4e76ea79, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(PromotionCombinationsTest, org.scalatest.tools.Framework$$anon$1@1147bdbf, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(CruisePricingTest, org.scalatest.tools.Framework$$anon$1@1147bdbf, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mPromotionCombinationsTest:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mallCombinablePromotions[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return the expected combinations[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mcombinablePromotions[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return the expected combinations for P1[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mcombinablePromotions[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m- should return the expected combinations for P3 *** FAILED ***[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  List(PromotionCombo(List(P2, P3)), PromotionCombo(List(P3, P4, P5))) did not contain the same elements as List(PromotionCombo(List(P3, P2)), PromotionCombo(List(P3, P4, P5))) (PromotionsCombinationsTest.scala:59)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 368 milliseconds.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 3[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 2, failed 1, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
-[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
-[0m[[0m[31merror[0m] [0m[0m	PromotionCombinationsTest[0m
-[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the expected combinations for P3[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mCruisePricingTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mgetBestGroupPrices[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the best prices for each rate group[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should handle cases where there are no rates[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should handle cases where there are no prices[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should handle cases where some rates have no corresponding prices[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should handle cases where some prices have no corresponding rates[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should handle cases where multiple cabins have prices for the same rate groups[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should handle cases with multiple prices for the same cabin and rate group[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 341 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 10[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 2, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 10, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CruisePricingTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PromotionCombinationsTest[0m
