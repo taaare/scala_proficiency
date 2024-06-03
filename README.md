@@ -4,9 +4,9 @@ This is a from scratch implementation of two Scala problems I undertook to bette
 
 I also built unit tests to run from the SBT shell - though they are under development. The main functions work as intended. 
 
-To run the main functions, use the following commands in the root dir
+To run the main functions, use the following terminal commands in the root dir
 
-```bash 
+```console 
 sbt
 ```
 
