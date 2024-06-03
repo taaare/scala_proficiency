@@ -6,10 +6,14 @@ I also built unit tests to run from the SBT shell - though they are under develo
 
 To run the main functions, use the following commands in the root dir
 
-```sbt```
+```console 
+sbt```
 
-```compile```
+```console
+compile```
 
-```runMain CruisePricing```
+```console 
+runMain CruisePricing```
 
-```runMain PromotionCombinations```
+```console
+runMain PromotionCombinations```

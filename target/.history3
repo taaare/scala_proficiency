@@ -12,3 +12,5 @@
 1717376217745:scala CruisePricing
 1717376462293:runMain CruisePricing
 1717376477597:git add .
+1717376684393:compile
+1717376693247:runMain CruisePricing
